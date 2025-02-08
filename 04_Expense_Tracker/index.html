@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="fade-in">Expense Tracker</h1>
+      <form id="expense-form" class="slide-in">
+        <input
+          type="text"
+          id="expense-name"
+          placeholder="Expense name"
+          required
+          class="input-field"
+        />
+        <input
+          type="number"
+          id="expense-amount"
+          placeholder="Amount"
+          step="0.01"
+          required
+          class="input-field"
+        />
+        <button type="submit" class="add-button">Add Expense</button>
+      </form>
+
+      <h2 class="fade-in">Expenses</h2>
+      <ul id="expense-list" class="expense-container">
+        <!-- Expenses will be dynamically added here -->
+      </ul>
+
+      <div id="total" class="slide-in">
+        <h3>Total: $<span id="total-amount">0.00</span></h3>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+:root {
+  --primary-bg: #1e2955;
+  --secondary-bg: #2c3e50;
+  --accent-color: #3498db;
+  --text-light: #f0f4f8;
+  --text-muted: #bdc3c7;
+  --delete-color: #e74c3c;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #273c75, #192a56, #4a69bd);
+  background-size: 400% 400%;
+  color: var(--text-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  width: 450px;
+  padding: 30px;
+  background-color: var(--primary-bg);
+  border-radius: 15px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(15px);
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: var(--text-light);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--secondary-bg);
+  border: 2px solid transparent;
+  border-radius: 8px;
+  color: var(--text-light);
+  caret-color: var(--text-light);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-field::placeholder {
+  color: var(--text-muted);
+}
+
+.input-field:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+}
+
+.add-button {
+  padding: 12px;
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+#expense-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.expense-item {
+  background-color: var(--secondary-bg);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.expense-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.expense-name {
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.expense-amount {
+  color: var(--text-muted);
+}
+
+.delete-button {
+  background-color: var(--delete-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+#total {
+  text-align: right;
+  font-size: 1.2em;
+  color: var(--text-light);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease forwards;
+}
+
+.slide-out {
+  animation: slideOut 0.3s ease forwards;
+}

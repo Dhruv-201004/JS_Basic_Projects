@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div class="container">
+        <header>
+          <h1><i class="fas fa-cloud-sun"></i> Weather App</h1>
+        </header>
+
+        <div class="search-container">
+          <div class="input-container">
+            <i class="fas fa-search search-icon"></i>
+            <input
+              type="text"
+              id="city-input"
+              placeholder="Search for a city..."
+            />
+            <button id="get-weather-btn">
+              <i class="fas fa-location-dot"></i> Get Weather
+            </button>
+          </div>
+        </div>
+
+        <div id="weather-info" class="weather-card hidden">
+          <div class="weather-header">
+            <h2 id="city-name"></h2>
+            <div id="weather-icon">
+              <i class="fas fa-cloud"></i>
+            </div>
+          </div>
+
+          <div class="weather-grid">
+            <div class="weather-item">
+              <i class="fas fa-temperature-high"></i>
+              <p id="temperature"></p>
+            </div>
+
+            <div class="weather-item">
+              <i class="fas fa-arrow-up"></i>
+              <p id="max-temperature"></p>
+            </div>
+
+            <div class="weather-item">
+              <i class="fas fa-arrow-down"></i>
+              <p id="min-temperature"></p>
+            </div>
+
+            <div class="weather-item">
+              <i class="fas fa-cloud"></i>
+              <p id="description"></p>
+            </div>
+
+            <div class="weather-item">
+              <i class="fas fa-tachometer-alt"></i>
+              <p id="pressure"></p>
+            </div>
+
+            <div class="weather-item">
+              <i class="fas fa-water"></i>
+              <p id="humidity"></p>
+            </div>
+          </div>
+        </div>
+
+        <div id="error-message" class="error-card hidden">
+          <i class="fas fa-exclamation-circle"></i>
+          <p>City not found. Please try again.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>

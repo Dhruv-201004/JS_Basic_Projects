@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Quiz</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="quiz-header">
+        <h1>Interactive Quiz</h1>
+        <div id="progress-container" class="hidden">
+          <div class="progress-text">Question <span id="current-question">1</span> of <span id="total-questions">4</span></div>
+          <div class="progress-bar">
+            <div id="progress-fill"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="quiz-container">
+        <div id="welcome-screen">
+          <h2>Welcome to the Quiz!</h2>
+          <p>Test your knowledge with these interesting questions.</p>
+          <p>Total questions: <span id="welcome-total-questions">4</span></p>
+          <button id="start-btn" class="primary-btn">
+            <i class="fas fa-play"></i> Start Quiz
+          </button>
+        </div>
+
+        <div id="question-container" class="hidden">
+          <div class="question-card">
+            <div class="category-badge" id="question-category"></div>
+            <h2 id="question-text"></h2>
+            <ul id="choices-list">
+              <!-- Choices will be added dynamically -->
+            </ul>
+          </div>
+          <div class="feedback-message" id="feedback"></div>
+          <button id="next-btn" class="primary-btn hidden">
+            <span>Next Question</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <div id="result-container" class="hidden">
+          <div class="result-card">
+            <i id="result-icon" class="fas fa-trophy"></i>
+            <h2>Quiz Complete!</h2>
+            <div class="score-container">
+              <div class="score-label">Your Score:</div>
+              <div id="score" class="score-value"></div>
+              <div id="score-percentage" class="score-percentage"></div>
+            </div>
+            <div class="action-buttons">
+              <button id="restart-btn" class="primary-btn">
+                <i class="fas fa-redo"></i> Try Again
+              </button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
