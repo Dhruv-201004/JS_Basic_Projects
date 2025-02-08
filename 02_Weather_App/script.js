@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const errorMessage = document.getElementById("error-message");
   const weatherIcon = document.getElementById("weather-icon");
 
-  const API_Key = "37086af9e1de3e4648daad123a763e34";
+  const API_Key = "";
 
   // Weather Icon Map
   const weatherIconMap = {
