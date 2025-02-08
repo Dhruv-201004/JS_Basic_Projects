@@ -1,6 +1,3 @@
-
-
-**Repository Name:** JavaScript Basic Projects Collection  
 **Description:**  
 This repository is a collection of beginner-friendly JavaScript projects designed to help you practice and improve your front-end development skills. Each project focuses on core JavaScript concepts, DOM manipulation, and interacting with APIs. Whether you're a beginner or looking to refresh your skills, these projects are a great way to build practical applications.
 
@@ -23,7 +20,7 @@ This repository is a collection of beginner-friendly JavaScript projects designe
 
 5. **Quiz App**  
    - A fun and interactive quiz application with multiple-choice questions.  
-   - Features: score tracking, and feedback on correct/incorrect answers.
+   - Features: Score tracking, and feedback on correct/incorrect answers.
 
 ### Technologies Used:
 - HTML5, CSS3, JavaScript (ES6+)  
